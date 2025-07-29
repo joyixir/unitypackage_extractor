@@ -47,6 +47,7 @@ def extractPackage(packagePath, outputPath=None, encoding='utf-8'):
       print(f"Extracting '{dirEntry.name}' as '{pathname}'")
       os.makedirs(os.path.dirname(assetOutPath), exist_ok=True) #Make the dirs up to the given folder
       shutil.move(f"{assetEntryDir}/asset", assetOutPath)
+      shutil.move(f"{assetEntryDir}/asset.meta", f"{assetOutPath}.meta")
 
 def cli(args):
   """
